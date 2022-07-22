@@ -69,7 +69,7 @@ export function Home() {
             My orders
           </Heading>
           <Text color="gray.200">
-            3
+            {orders.length}
           </Text>
         </HStack>
 
