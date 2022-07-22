@@ -28,3 +28,17 @@ $ expo start
 # press "d" to open in your browser
 ```
 
+## REACT NAVIGATION
+For more info, docs: https://reactnavigation.org/docs/getting-started
+
+```bash
+# Install core 
+$ npm install @react-navigation/native
+
+# Install dependencies
+$ expo install react-native-screens react-native-safe-area-context
+
+# Install native-stack navigator library
+$ npm install @react-navigation/native-stack
+```
+
