@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "356676757363",
+    "project_id": "apphelp-react-native",
+    "storage_bucket": "apphelp-react-native.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356676757363:android:d7bf57d03ef320a5eb4706",
+        "android_client_info": {
+          "package_name": "com.apphelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356676757363-efh12glbcjr9o98t6ftluub0k2b8d8vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLVVFKp5ihQdcEaXERuaSmOvfVzZMxAmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356676757363-efh12glbcjr9o98t6ftluub0k2b8d8vk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "356676757363-s4bcj589fgcl20jq562r176sei05elod.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.apphelp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
