@@ -10,7 +10,7 @@ import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 
 export function SignIn() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
@@ -23,14 +23,14 @@ export function SignIn() {
     }
 
     // ativa o estado de loading para verdadeiro
-    setIsLoading(true);
+    setLoading(true);
 
     // autenticação via email e password com captura de erro
     auth()
     .signInWithEmailAndPassword(email, password)
     .catch((error) => {
       console.log(error);
-      setIsLoading(false);
+      setLoading(false);
 
       switch (error.code) {
         case 'auth/invalid-email':
@@ -75,7 +75,7 @@ export function SignIn() {
         title="SignIn" 
         w="full"
         onPress={handleSignIn} 
-        isLoading={isLoading}
+        isLoading={loading}
       />
     </VStack>
   );
