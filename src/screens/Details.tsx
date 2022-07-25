@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { HStack, Text, VStack, useTheme, ScrollView, Box } from 'native-base';
 import { useNavigation, useRoute } from '@react-navigation/native'
 import firestore from '@react-native-firebase/firestore';
-import { CircleWavyCheck, Hourglass, DesktopTower, Clipboard } from 'phosphor-react-native';
+import { CircleWavyCheck, Hourglass, DesktopTower, ClipboardText } from 'phosphor-react-native';
 import { Alert } from 'react-native';
 
 import { OrderFirestoreDTO } from '../DTOs/OrderFirestoreDTO';
@@ -127,13 +127,13 @@ export function Details() {
           title='equipment'
           description={`Patrimony ${order.patrimony}`}
           icon={DesktopTower} 
-          footer={order.when}
         />
 
         <CardDetails 
           title='problem description'
           description={order.description}
-          icon={Clipboard}          
+          icon={ClipboardText}
+          footer={`Register on ${order.when}`}    
         />
 
         <CardDetails 
