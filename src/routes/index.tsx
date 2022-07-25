@@ -11,11 +11,13 @@ export function Routes() {
   const [user, setUser] = useState<FirebaseAuthTypes.User>();
 
   useEffect(() => {
+    // pegando login e gravando dados no state de user
     const subscriber = auth().onAuthStateChanged(response => {
       setUser(response);
       setLoading(false);
     });
 
+    // limpando useEffect
     return subscriber;
   }, []);
 
