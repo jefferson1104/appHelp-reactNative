@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Alert } from 'react-native';
 import auth from '@react-native-firebase/auth';
-import { VStack, Heading, Icon, useTheme } from 'native-base';
+import { useNavigation } from '@react-navigation/native';
+import { VStack, Heading, Icon, useTheme, Link } from 'native-base';
 import { Envelope, Key } from 'phosphor-react-native';
 
 import Logo from '../assets/logo_primary.svg';
@@ -9,17 +10,19 @@ import Logo from '../assets/logo_primary.svg';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 
+
 export function SignIn() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
   const { colors } = useTheme();
+  const { navigate } = useNavigation();
 
   function handleSignIn() {
     // verifica se os campos estão vazios
     if (!email || !password) {
-      return Alert.alert('SignIn', 'Enter email and password.');
+      return Alert.alert('SignIn Error', 'Enter email and password.');
     }
 
     // ativa o estado de loading para verdadeiro
@@ -45,8 +48,11 @@ export function SignIn() {
         default:
           Alert.alert('SignIn Error', 'unexpected error, try again later')
       }
-
     });
+  }
+
+  function handleSignUp(){
+    navigate("signup");
   }
 
   return (
@@ -77,6 +83,15 @@ export function SignIn() {
         onPress={handleSignIn} 
         isLoading={loading}
       />
+
+      <Link 
+        mt={5}
+        _text={{color: "primary.700", fontSize: "md", fontWeight: "bold"}}
+        isUnderlined={false}
+        onPress={handleSignUp}
+      >
+        Create your account
+      </Link>
     </VStack>
   );
 }
